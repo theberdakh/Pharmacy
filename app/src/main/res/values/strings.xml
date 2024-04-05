@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pharmacy</string>
+    <string name="home">Bas bet</string>
+    <string name="search">Izlew</string>
+    <string name="account">Akkount</string>
+    <string name="hello">Assalawma áleykum!</string>
+    <string name="hello_subtitle">Qaysı dári tuwralı biliwdi qáleysiz?</string>
+</resources>
