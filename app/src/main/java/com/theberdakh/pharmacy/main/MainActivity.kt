@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.theberdakh.pharmacy.R
-import com.theberdakh.pharmacy.data.convertJsonString
-import com.theberdakh.pharmacy.data.jsonToString
 import com.theberdakh.pharmacy.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

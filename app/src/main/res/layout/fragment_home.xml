@@ -13,10 +13,11 @@
         android:orientation="vertical">
 
 
-        <com.google.android.material.appbar.AppBarLayout
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp">
+            app:titleCollapseMode="scale"
+            style="@style/Widget.Material3.CollapsingToolbar.Medium"
+            android:layout_height="?collapsingToolbarLayoutMediumSize">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
@@ -28,7 +29,7 @@
                 app:subtitleTextAppearance="?subtitleTextAppearance"
                 />
 
-        </com.google.android.material.appbar.AppBarLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         <Toolbar
             android:layout_width="match_parent"

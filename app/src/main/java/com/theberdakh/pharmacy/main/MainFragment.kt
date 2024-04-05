@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.theberdakh.pharmacy.R
 import com.theberdakh.pharmacy.databinding.FragmentMainBinding
 import com.theberdakh.pharmacy.home.HomeFragment
+import com.theberdakh.pharmacy.search.SearchFragment
 import com.theberdakh.pharmacy.utils.replaceFragment
 
 class MainFragment: Fragment() {
@@ -22,7 +23,20 @@ class MainFragment: Fragment() {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
 
         initViews()
+        initListeners()
         return binding.root
+    }
+
+    private fun initListeners() {
+        binding.bottomNav.setOnItemSelectedListener { item ->
+           val fragment =  when(item.itemId){
+                R.id.action_home -> HomeFragment()
+                R.id.action_search -> SearchFragment()
+               else -> {HomeFragment()}
+           }
+            replaceFragment(childFragmentManager, R.id.nested_fragment_host, fragment)
+            true
+        }
     }
 
     private fun initViews() {

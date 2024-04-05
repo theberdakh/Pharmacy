@@ -5,15 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
-import androidx.recyclerview.widget.RecyclerView.Orientation
-import com.theberdakh.pharmacy.data.Medicine
-import com.theberdakh.pharmacy.data.convertJsonString
-import com.theberdakh.pharmacy.data.getAllPharmacies
-import com.theberdakh.pharmacy.data.jsonToString
+import com.theberdakh.pharmacy.data.MedicineRepository.getAllPharmacies
+import com.theberdakh.pharmacy.data.util.convertJsonString
+import com.theberdakh.pharmacy.data.util.jsonToString
 import com.theberdakh.pharmacy.databinding.FragmentHomeBinding
+import com.theberdakh.pharmacy.home.presentation.MedicineAdapter
+import com.theberdakh.pharmacy.home.presentation.PharmacyAdapter
 
 class HomeFragment: Fragment() {
     private var _binding: FragmentHomeBinding? = null

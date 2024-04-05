@@ -1,4 +1,4 @@
-package com.theberdakh.pharmacy.home
+package com.theberdakh.pharmacy.home.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,7 +10,9 @@ import com.theberdakh.pharmacy.databinding.ItemPharmacyCompanyBinding
 
 
 
-class PharmacyAdapter(val onClick: (Pharmacy) -> Unit): ListAdapter<Pharmacy, PharmacyAdapter.PharmacyViewHolder>(PharmacyDiffUtil()) {
+class PharmacyAdapter(val onClick: (Pharmacy) -> Unit): ListAdapter<Pharmacy, PharmacyAdapter.PharmacyViewHolder>(
+    PharmacyDiffUtil()
+) {
 
 
 

@@ -1,7 +1,8 @@
-package com.theberdakh.pharmacy.data
+package com.theberdakh.pharmacy.data.util
 
 import android.content.Context
 import com.google.gson.GsonBuilder
+import com.theberdakh.pharmacy.data.Medicine
 
 
 fun Context.jsonToString(name: String) = this.assets.open(name).bufferedReader().use { it.readText() }

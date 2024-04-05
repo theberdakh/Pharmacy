@@ -1,4 +1,4 @@
-package com.theberdakh.pharmacy.home
+package com.theberdakh.pharmacy.home.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
