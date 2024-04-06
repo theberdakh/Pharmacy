@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/round_account_circle_24"
+            app:title="Profil"
+            app:titleCentered="true" />
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_corner"
+            android:backgroundTint="?colorPrimaryDark"
+            app:subtitle="Esaptı aktivlestiriw"
+            app:subtitleTextAppearance="?textAppearanceSearchResultTitle"
+            app:subtitleTextColor="?colorSurface"
+            app:title="Keshbek balansı"
+            app:titleTextAppearance="?textAppearanceSearchResultSubtitle"
+            app:titleTextColor="?colorSurface" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/shape_corner"
+            android:drawablePadding="8dp"
+            android:elevation="1dp"
+            android:fontFamily="sans-serif-medium"
+            android:padding="12dp"
+            android:text="Kiriw"
+            android:textAppearance="?textAppearanceTitleMedium"
+            app:drawableEndCompat="@drawable/round_navigate_next_24"
+            app:drawableStartCompat="@drawable/round_account_circle_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/shape_corner"
+            android:drawablePadding="8dp"
+            android:elevation="1dp"
+            android:fontFamily="sans-serif-medium"
+            android:padding="12dp"
+            android:text="Til"
+            android:textAppearance="?textAppearanceTitleMedium"
+            app:drawableEndCompat="@drawable/round_navigate_next_24"
+            app:drawableStartCompat="@drawable/round_language_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/shape_corner"
+            android:drawablePadding="8dp"
+            android:elevation="1dp"
+            android:fontFamily="sans-serif-medium"
+            android:padding="12dp"
+            android:text="Saqlanǵanlar"
+            android:textAppearance="?textAppearanceTitleMedium"
+            app:drawableEndCompat="@drawable/round_navigate_next_24"
+            app:drawableStartCompat="@drawable/round_bookmark_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/shape_corner"
+            android:drawablePadding="8dp"
+            android:elevation="1dp"
+            android:fontFamily="sans-serif-medium"
+            android:padding="12dp"
+            android:text="Jańalıqlar"
+            android:textAppearance="?textAppearanceTitleMedium"
+            app:drawableEndCompat="@drawable/round_navigate_next_24"
+            app:drawableStartCompat="@drawable/round_newspaper_24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp"
+            android:background="@drawable/shape_corner"
+            android:drawablePadding="8dp"
+            android:elevation="1dp"
+            android:fontFamily="sans-serif-medium"
+            android:padding="12dp"
+            android:text="Programma tuwralı"
+            android:textAppearance="?textAppearanceTitleMedium"
+            app:drawableEndCompat="@drawable/round_navigate_next_24"
+            app:drawableStartCompat="@drawable/round_info_24" />
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

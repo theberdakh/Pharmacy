@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.theberdakh.pharmacy.R
+import com.theberdakh.pharmacy.account.AccountFragment
 import com.theberdakh.pharmacy.databinding.FragmentMainBinding
 import com.theberdakh.pharmacy.home.HomeFragment
 import com.theberdakh.pharmacy.search.SearchFragment
@@ -32,7 +33,7 @@ class MainFragment: Fragment() {
            val fragment =  when(item.itemId){
                 R.id.action_home -> HomeFragment()
                 R.id.action_search -> SearchFragment()
-               else -> {HomeFragment()}
+               else -> AccountFragment()
            }
             replaceFragment(childFragmentManager, R.id.nested_fragment_host, fragment)
             true
