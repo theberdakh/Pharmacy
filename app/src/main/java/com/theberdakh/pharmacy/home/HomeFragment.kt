@@ -5,12 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.theberdakh.pharmacy.R
 import com.theberdakh.pharmacy.data.MedicineRepository.getAllPharmacies
 import com.theberdakh.pharmacy.data.util.convertJsonString
 import com.theberdakh.pharmacy.data.util.jsonToString
 import com.theberdakh.pharmacy.databinding.FragmentHomeBinding
 import com.theberdakh.pharmacy.home.presentation.MedicineAdapter
 import com.theberdakh.pharmacy.home.presentation.PharmacyAdapter
+import com.theberdakh.pharmacy.medicine.MedicineFragment
+import com.theberdakh.pharmacy.utils.addFragment
+import com.theberdakh.pharmacy.utils.addFragmentToBackStack
 
 class HomeFragment: Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -44,7 +48,13 @@ class HomeFragment: Fragment() {
 
         val json = requireContext().jsonToString("dariler.json")
         val list = convertJsonString(json)
-        val medicineAdapter = MedicineAdapter()
+        val medicineAdapter = MedicineAdapter{
+            addFragmentToBackStack(
+                requireActivity().supportFragmentManager,
+                R.id.parent_fragment_host,
+                MedicineFragment(it)
+            )
+        }
 
         if (list != null){
             val newList = list.toList()

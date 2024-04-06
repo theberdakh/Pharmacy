@@ -8,14 +8,22 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.theberdakh.pharmacy.data.Medicine
 import com.theberdakh.pharmacy.databinding.ItemMedicineBinding
 
-class MedicineAdapter :
+class MedicineAdapter(private val onClick: (Medicine) -> Unit) :
     ListAdapter<Medicine, MedicineAdapter.MedicineViewHolder>(MedicineDiffUtil()) {
 
     inner class MedicineViewHolder(val binding: ItemMedicineBinding) : ViewHolder(binding.root) {
+
+        init {
+            binding.root.setOnClickListener {
+                onClick.invoke(getItem(adapterPosition))
+            }
+        }
+
         fun bind() {
             val medicine = getItem(adapterPosition)
             binding.title.text = medicine.name
             binding.subtitle.text = medicine.characteristics
+
         }
     }
 

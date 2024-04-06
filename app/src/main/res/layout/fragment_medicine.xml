@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorSurface"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            style="@style/Widget.Material3.CollapsingToolbar.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="?collapsingToolbarLayoutMediumSize"
+            app:titleCollapseMode="scale">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/title_medicine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:navigationIcon="@drawable/round_close_24"
+                app:titleTextAppearance="?textAppearanceHeadline5"
+                tools:title="@string/hello" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            app:checkedChip="@+id/chip_characteristics"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_characteristics"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xarakteristika"
+                android:textAppearance="?textAppearanceBodyLarge"
+                app:chipCornerRadius="16dp"
+                app:chipStrokeColor="?colorSecondary" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_usage"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paydalanıw"
+                android:textAppearance="?textAppearanceBodyLarge"
+                app:chipCornerRadius="16dp"
+                app:chipStrokeColor="?colorSecondary" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_warning"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eskertpeler"
+                android:textAppearance="?textAppearanceBodyLarge"
+                app:chipCornerRadius="16dp"
+                app:chipStrokeColor="?colorSecondary" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_general"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kórinisi hám múddeti"
+                android:textAppearance="?textAppearanceBodyLarge"
+                app:chipCornerRadius="16dp"
+                app:chipStrokeColor="?colorSecondary" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_medicine_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

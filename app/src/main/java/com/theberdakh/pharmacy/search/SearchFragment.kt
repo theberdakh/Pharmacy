@@ -5,10 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.theberdakh.pharmacy.R
 import com.theberdakh.pharmacy.data.util.convertJsonString
 import com.theberdakh.pharmacy.data.util.jsonToString
 import com.theberdakh.pharmacy.databinding.FragmentSearchBinding
 import com.theberdakh.pharmacy.home.presentation.MedicineAdapter
+import com.theberdakh.pharmacy.medicine.MedicineFragment
+import com.theberdakh.pharmacy.utils.addFragmentToBackStack
 
 class SearchFragment: Fragment() {
     private var _binding: FragmentSearchBinding? = null
@@ -23,14 +26,19 @@ class SearchFragment: Fragment() {
 
         initViews()
 
-
         return binding.root
     }
 
     private fun initViews() {
         val json = requireContext().jsonToString("dariler.json")
         val list = convertJsonString(json)
-        val medicineAdapter = MedicineAdapter()
+        val medicineAdapter = MedicineAdapter{
+            addFragmentToBackStack(
+                requireActivity().supportFragmentManager,
+                R.id.parent_fragment_host,
+                MedicineFragment(it)
+            )
+        }
 
         if (list != null){
             val newList = list.toList()
